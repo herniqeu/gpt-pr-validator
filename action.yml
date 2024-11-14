@@ -15,10 +15,6 @@ inputs:
     description: "Glob patterns to exclude files from analysis"
     required: false
     default: ""
-  COOKBOOK_URL:
-    description: "URL to fetch validation rules cookbook from"
-    required: false
-    default: "https://gist.github.com/herniqeu/371d926a40cca6dcd85e0d685fdd1cf6"
 runs:
   using: "node16"
   main: "dist/src/main.js"

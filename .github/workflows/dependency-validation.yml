@@ -27,5 +27,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          COOKBOOK_URL: "https://gist.githubusercontent.com/herniqeu/371d926a40cca6dcd85e0d685fdd1cf6/raw"
           exclude: "*.md,*.txt"
+        env:
+          COOKBOOK_URL: ${{ env.COOKBOOK_URL }}
