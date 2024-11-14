@@ -1,0 +1,27 @@
+name: "AI Dependency & Migration Validator"
+description: "Validate dependency versioning and database migrations using AI"
+inputs:
+  GITHUB_TOKEN:
+    description: "GitHub token to interact with the repository"
+    required: true
+  OPENAI_API_KEY:
+    description: "OpenAI API key for GPT"
+    required: true
+  OPENAI_API_MODEL:
+    description: "OpenAI API model"
+    required: false
+    default: "gpt-4"
+  exclude:
+    description: "Glob patterns to exclude files from analysis"
+    required: false
+    default: ""
+  COOKBOOK_URL:
+    description: "URL to fetch validation rules cookbook from"
+    required: false
+    default: "https://gist.github.com/herniqeu/371d926a40cca6dcd85e0d685fdd1cf6"
+runs:
+  using: "node16"
+  main: "dist/src/main.js"
+branding:
+  icon: "shield"
+  color: "blue"
